@@ -188,8 +188,8 @@ void loop() {
   }
     
   // read potmeter and map to speed of leds
-  potSpeed = map(analogRead(POTB_PIN), 0, 1000, 0, 200);
-  potScream = map(analogRead(POTC_PIN), 0, 1000, 0, 200);
+  potSpeed = map(analogRead(POTB_PIN), 0, 1000, 2, 200);
+  potScream = map(analogRead(POTC_PIN), 0, 1000, 2, 200);
   
 
   switch(state) {
