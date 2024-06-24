@@ -1,3 +1,6 @@
+/*  For Znurka gun, running on a seeed xiao samd21  */
+/*  copyright (c) 2024 productbakery                */
+
 #include <Arduino.h>
 #include <Adafruit_NeoPixel.h>
 #include <Wire.h>
@@ -99,9 +102,9 @@ void setScore(uint8_t score){
     }
   }
   strip.show();
-  }
+}
 
-  void blinkScore(uint8_t score, uint8_t times, uint8_t wait){
+void blinkScore(uint8_t score, uint8_t times, uint8_t wait){
   //blink last pixel
   for (int i = 0; i < times; i++){
     strip.setPixelColor(leds_SCORE[score-1], strip.Color(0, 0, 0, 0));
@@ -111,9 +114,6 @@ void setScore(uint8_t score){
     strip.show();
     delay(wait);
   }
-
-
-
 
 }
 
@@ -157,10 +157,9 @@ void setup() {
   btnA.interval(50); // debounce interval in ms
   btnB.attach(BTN2_PIN, INPUT_PULLUP);
   btnB.interval(50); // debounce interval in ms
-
 }
 
-unsigned long prevMillis = millis();  //  Update current time
+unsigned long prevMillis = millis();
 
 void loop() {
 
@@ -193,7 +192,6 @@ void loop() {
   potSpeed = map(analogRead(POTB_PIN), 0, 1000, 2, 200);
   potScream = map(analogRead(POTC_PIN), 0, 1000, 2, 200);
   
-
   switch(state) {
     case INIT:
       if(currentMillis - prevMillis > 100) {
