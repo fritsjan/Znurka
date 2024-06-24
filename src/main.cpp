@@ -67,7 +67,9 @@ const colorObject cUV2 = {0,120,80,0};
 const colorObject cUV3 = {0,120,110,0};
 const colorObject cWhite= {10,10,10,200};
 
-colorObject colorScore[8] = {cGreen, cGreen, cYellow, cYellow, cOrange, cOrange, cRed, cRed}; // score colors
+//colorObject colorScore[8] = {cGreen, cGreen, cYellow, cYellow, cOrange, cOrange, cRed, cRed}; // score colors
+// colorscore inverse order
+colorObject colorScore[8] = {cRed, cRed, cOrange, cOrange, cYellow, cYellow, cGreen, cGreen}; // score colors
 colorObject colorVU[8] = {cUV1,cUV1,cUV2,cUV2,cUV2,cUV2,cUV3,cUV3}; // vu meter colors
 colorObject colorFire[8] = {cRed,cRed,cOrange,cOrange,cWhite,cWhite,cWhite,cWhite}; // fire colors
 
